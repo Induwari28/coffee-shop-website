@@ -11,12 +11,12 @@
 }
 
 :root{
-    --main-color :orange;
+    --main-color :rgb(246, 141, 35);
     --secondary-color :white;
     --text-color :rgb(20, 19, 19);
-    --bg-color:purple;
+    --bg-color:rgb(149, 34, 149);
 
-    --box-shadow :2px 2px 10px 14px rgb(14 55 54/15%);
+    --box-shadow :2px 2px 10px 14px rgba(1, 126, 124, 0.15);
 }
 
 section{
@@ -127,7 +127,7 @@ header{
 .home{
     width: 100%;
     min-height: 100vh;
-    background-image: url("copy img/3.jpg");
+    background-image: url("copy img/wallpaper.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -140,7 +140,7 @@ header{
 
 .home-text h1{
     font-size: 3.4rem;
-    color: var(--main-color);
+    color: rgb(111, 5, 5);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -148,7 +148,7 @@ header{
 .home-text
 {
     font-size: 0.938rem;
-    color: var(--bg-color);
+    color:black;
     margin: 0.5rem 0 1.4rem;
 }
 
@@ -411,6 +411,21 @@ header{
     gap: 1rem;
 }
 
+@keyframes hero {
+    0%, 100% {
+        transform: translateY(0); /* Starts and ends in the exact same spot */
+    }
+    50% {
+        transform: translateY(30px); /* Moves down at the halfway point */
+    }
+}
+
+.home-img img {
+    animation: hero 3s ease-in-out infinite;
+}
+
+
+
 @media (max-width: 1058px) {
     .header{
         padding: 16px 60px;
@@ -423,3 +438,99 @@ header{
         font-size: 2.4rem;
     }
 }
+
+
+@media (max-width: 991px) {
+    .header{
+        padding: 16px 4%;
+    }
+    .section{
+        padding: 50px 4%;
+    }
+    
+    .home-text h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header{
+        padding: 12px 4%;
+    }
+    
+    #menu-icon{
+        display: initial;
+    }
+
+    .navbar{
+        position: absolute;
+        top: -500px; /* THIS HIDES THE MENU OFF THE TOP OF THE SCREEN */
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        display: flex;
+        row-gap: 1.4em;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .navbar a{
+        padding: 8px 17px;
+        color: var(--text-color);
+    }
+
+    .navbar a:hover{
+        background-color: var(--main-color);
+    }
+
+    /* THE FIX: Use a dot (not a colon) and pull the menu down */
+    .navbar.active {
+       top: 100%; /* THIS SLIDES THE MENU DOWN WHEN CLICKED */
+    }
+
+    .about{
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+}
+
+@media (max-width: 360px) {
+    .header {
+        padding: 11px 4%;
+    }
+    .logo img {
+        width: 45px;
+    }
+    .home-text {
+        padding-top: 15px;
+    }
+    .home-text h1 {
+        font-size: 1.4rem;
+    }
+
+    /* THE NUKE OPTION */
+    .about {
+        display: flex !important; 
+        flex-direction: column-reverse !important; 
+        align-items: center;
+        text-align: center;
+    }
+    .about-text  {
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .heading h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
