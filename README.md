@@ -8,7 +8,7 @@ This project is designed to simulate a real-world café landing page with a clea
 ## 📸 Project Preview
 
 ### Home Page
-![Home](copy img\home.jpeg)
+![Home](copy%20img/home.jpeg)
 
 ### Products Section
 ![Products](copy img\products.jpeg)
