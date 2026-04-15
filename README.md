@@ -11,10 +11,10 @@ This project is designed to simulate a real-world café landing page with a clea
 ![Home](copy%20img/home.jpeg)
 
 ### Products Section
-![Products](copy img\products.jpeg)
+![Products](copy%20img/products.jpeg)
 
 ### Customer Section
-![Mobile](copy img\customers.jpeg)
+![Mobile](copy%20img/customers.jpeg)
 
 ---
 
